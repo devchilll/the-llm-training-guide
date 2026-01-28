@@ -1,6 +1,8 @@
 # Post-Training & Alignment Interview Prep Guide
 
-** Disclaimer: This guide is not a substitute for professional advice. I also use LLM to help generate and structure this guide. Please use it as a reference, not a replacement for your own research. ** 
+**Disclaimer: This guide is not a substitute for professional advice. I also use LLM to help generate and structure this guide. Please use it as a reference, not a replacement for your own research.** 
+
+---
 
 > **Goal**: Prepare for LLM post-training/alignment roles at Tier-0 labs (DeepMind, Anthropic, OpenAI, xAI).
 
