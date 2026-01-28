@@ -41,16 +41,25 @@
   - Key insight: Reparameterizes RLHF objective, directly optimizes policy from preferences
 - **SafeDPO**: Integrating safety constraints into the loss function
 - **IPO / KTO**: Alternatives that address DPO's distribution shift issues
+- **ORPO**: Odds-ratio preference optimization (no reference model needed)
 
 ### Reinforcement Learning for Reasoning
 - **GRPO (Group Relative Policy Optimization)**: DeepSeek-R1's verifier-based reasoning paradigm
 - **PPO (Proximal Policy Optimization)**: Actor-Critic with clipped surrogate objective
 - **REINFORCE with baseline**: Simpler alternative for reward-based learning
+- **Reward Models**: Training verifiers for outcome and process supervision
+
+### Safety & Constitutional AI
+- **RLHF vs RLAIF**: Human feedback vs. AI-generated feedback for alignment
+- **Constitutional AI**: Self-critique + revision with principle-based feedback
+- **Red-teaming integration**: Iterative safety training from adversarial prompts
 
 ### Key Interview Topics
 - Derive the DPO loss from the RLHF objective
 - Explain advantage estimation in PPO
 - When to use DPO vs. PPO vs. GRPO?
+- Compare RLHF vs RLAIF: tradeoffs and use cases
+- How do process reward models differ from outcome reward models?
 
 → *Hands-on: See Stages 1-3 in [handson.md](./handson.md#stage-1)*
 
@@ -87,21 +96,34 @@
 - **Unsloth**: 2x faster LoRA/QLoRA with 70% VRAM savings
 - **Axolotl**: YAML-driven training pipelines with extensive config options
 - **LLaMA-Factory**: Web UI and CLI for production fine-tuning
+- **TRL**: HuggingFace library for SFT, DPO, PPO, GRPO
 
 ### Parameter-Efficient Fine-Tuning (PEFT)
 - **LoRA / QLoRA**: Low-rank adaptation of attention matrices
 - **DoRA**: Weight-decomposed low-rank adaptation
 - **Adapter layers**: Bottleneck modules between transformer layers
+- **Model Merging**: TIES, DARE, SLERP for combining multiple adapters
+
+### Training Optimizations
+- **Flash Attention**: Memory-efficient attention (O(N) instead of O(N²))
+- **Gradient Checkpointing**: Trade compute for memory during backprop
+- **Mixed Precision (BF16/FP16)**: Faster training with lower memory
+- **DeepSpeed / FSDP**: Distributed training across multiple GPUs
 
 ### Inference & Serving
 - **vLLM & PagedAttention**: Dynamic KV cache management for long contexts
-- **Multi-LoRA Serving**: Hot-swapping domain-specific adapters on frozen base
+- **S-LoRA (Multi-Tenant)**: Serve thousands of private LoRA adapters per customer
+  - Key insight: Unified paging for adapter weights + isolation between tenants
+- **Speculative Decoding**: Use small draft model to speed up large model inference
 - **Quantization**: AWQ, GPTQ, GGUF for efficient deployment
+- **Continuous Batching**: Maximize GPU utilization with dynamic batching
 
 ### Key Interview Topics
 - Explain how LoRA reduces memory requirements
 - How does PagedAttention improve throughput?
-- Design a system for serving 100 different LoRA adapters
+- Design a multi-tenant system serving 1000 private LoRA adapters
+- Explain the tradeoffs of speculative decoding
+- How does Flash Attention achieve O(N) memory?
 
 → *Hands-on: See infra setup in [handson.md](./handson.md#stage-4)*
 

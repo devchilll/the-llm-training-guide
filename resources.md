@@ -23,6 +23,7 @@
 - [InstructGPT (RLHF)](https://arxiv.org/abs/2203.02155) — OpenAI's original RLHF paper
 - [Constitutional AI](https://arxiv.org/abs/2212.08073) — Anthropic's RLAIF approach
 - [DPO: Direct Preference Optimization](https://arxiv.org/abs/2305.18290) — RL-free preference learning
+- [KTO: Model Alignment as Prospect Theoretic Optimization](https://arxiv.org/abs/2402.01306) — Kahneman-Tversky optimization
 
 ### Reasoning & RL
 - [DeepSeek-R1](https://arxiv.org/abs/2501.12948) — GRPO for reasoning models
@@ -34,6 +35,12 @@
 - [Evol-Instruct (WizardLM)](https://arxiv.org/abs/2304.12244) — Evolving instruction complexity
 - [Orca 2](https://arxiv.org/abs/2311.11045) — Teaching small models to reason
 
+### Infrastructure & Efficiency
+- [LoRA](https://arxiv.org/abs/2106.09685) — Low-Rank Adaptation for efficient fine-tuning
+- [S-LoRA](https://arxiv.org/abs/2311.03285) — Multi-tenant LoRA serving at scale
+- [Flash Attention](https://arxiv.org/abs/2205.14135) — IO-aware exact attention
+- [Speculative Decoding](https://arxiv.org/abs/2211.17192) — Accelerating LLM inference
+
 ---
 
 ## 🔧 Tools & Frameworks
@@ -43,11 +50,17 @@
 - [**Axolotl**](https://github.com/OpenAccess-AI-Collective/axolotl) — YAML-driven training pipelines
 - [**LLaMA-Factory**](https://github.com/hiyouga/LLaMA-Factory) — Web UI for fine-tuning
 - [**TRL**](https://github.com/huggingface/trl) — HuggingFace's RLHF library
+- [**mergekit**](https://github.com/arcee-ai/mergekit) — Model merging (TIES, DARE, SLERP)
 
 ### Inference & Serving
 - [**vLLM**](https://github.com/vllm-project/vllm) — High-throughput serving with PagedAttention
+- [**SGLang**](https://github.com/sgl-project/sglang) — Structured generation + RadixAttention
 - [**llama.cpp**](https://github.com/ggerganov/llama.cpp) — CPU/edge inference with GGUF
 - [**Ollama**](https://ollama.ai/) — Local model deployment made easy
+
+### Training Optimizations
+- [**Flash Attention**](https://github.com/Dao-AILab/flash-attention) — Memory-efficient attention
+- [**DeepSpeed**](https://github.com/microsoft/DeepSpeed) — Distributed training at scale
 
 ### Evaluation
 - [**lm-eval-harness**](https://github.com/EleutherAI/lm-evaluation-harness) — Standard benchmark suite
