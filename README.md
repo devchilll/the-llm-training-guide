@@ -4,7 +4,7 @@
 
 ---
 
-> **Goal**: Prepare for LLM post-training/alignment roles at Tier-0 labs (DeepMind, Anthropic, OpenAI, xAI).
+**Goal**: Prepare for LLM post-training/alignment roles at Tier-0 labs (DeepMind, Anthropic, OpenAI, xAI).
 
 This guide covers the fundamental building blocks and hands-on experience needed for roles in model alignment, RLHF, and post-training optimization.
 
