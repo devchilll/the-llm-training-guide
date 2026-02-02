@@ -1,12 +1,12 @@
 # Post-Training & Alignment: Knowledge Guide
 
-> A comprehensive reference for LLM post-training roles at Tier-0 labs (DeepMind, Anthropic, OpenAI).
+> A comprehensive reference for LLM post-training and alignment techniques.
 
 ---
 
 ## 🧱 Pillar 0: Foundations
 
-*Focus: Core building blocks every candidate must understand deeply.*
+*Focus: Core building blocks for understanding LLM training.*
 
 ### Transformer Architecture
 - **Self-Attention**: Query-Key-Value mechanics, softmax normalization, multi-head attention
@@ -18,7 +18,7 @@
 - **Optimization**: AdamW, learning rate schedules, gradient clipping
 - **Tokenization**: BPE, SentencePiece, vocabulary construction tradeoffs
 
-### Key Interview Topics
+### Learning Objectives
 - Implement attention from scratch (NumPy or PyTorch)
 - Explain why we use softmax temperature in sampling
 - Derive the gradient of cross-entropy loss
@@ -47,7 +47,7 @@
 - **ORPO**: Odds-ratio preference optimization (no reference model needed)
 
 ### Reinforcement Learning for Reasoning
-- **GRPO (Group Relative Policy Optimization)**: 🔥 The 2026 differentiator
+- **GRPO (Group Relative Policy Optimization)**: 🔥 Key technique for 2026
   - Eliminates the Critic model → **50% VRAM savings** vs PPO
   - Uses **group average** for advantage estimation instead of learned value function
   - Powers DeepSeek-R1's multi-step reasoning capabilities
@@ -60,7 +60,7 @@
 - **Constitutional AI**: Self-critique + revision with principle-based feedback
 - **Red-teaming integration**: Iterative safety training from adversarial prompts
 
-### Key Interview Topics
+### Learning Objectives
 - Derive the DPO loss from the RLHF objective (explain why RM-free)
 - **Explain GRPO**: How does eliminating the Critic save 50% VRAM? What's group-relative advantage?
 - When to use DPO vs. PPO vs. GRPO?
@@ -85,7 +85,7 @@
 - **Distillation**: Transfer reasoning traces from large models (GPT-4/Claude) to smaller models
 - **Decontamination**: Ensuring training data doesn't overlap with benchmarks
 
-### Key Interview Topics
+### Learning Objectives
 - Design a data flywheel for improving math reasoning
 - How do you verify synthetic data quality at scale?
 - Tradeoffs between distillation and RL-based reasoning
@@ -131,7 +131,7 @@
 - **Curator**: Applies incremental "delta updates" to the context playbook
 - **Key insight**: Design systems where context evolves as a self-improving "playbook"
 
-### Key Interview Topics
+### Learning Objectives
 - Explain how LoRA reduces memory requirements
 - How does PagedAttention improve throughput?
 - Design a multi-tenant system serving 1000 private LoRA adapters
@@ -161,7 +161,7 @@
 - **Ragas & DeepEval**: Metrics for RAG systems (retrieval relevancy, faithfulness)
 - **Training curves**: Loss, gradient norms, activation statistics
 
-### Key Interview Topics
+### Learning Objectives
 - Design an evaluation suite for a customer service agent
 - How do you detect reward hacking?
 - Limitations of LLM-as-a-Judge
@@ -170,9 +170,9 @@
 
 ---
 
-## 💼 Pillar 5: Interview Preparation
+## 💼 Pillar 5: Applied Skills
 
-*Focus: Navigating Tier-0 lab recruitment (DeepMind, Anthropic, OpenAI).*
+*Focus: Practical implementation and project building.*
 
 ### ML System Design
 - Designing million-token context training systems
@@ -194,4 +194,4 @@
 2. **Weeks 3-4**: SFT deep-dive + Stage 1 hands-on
 3. **Weeks 5-6**: DPO/GRPO + Stages 2-3 hands-on
 4. **Weeks 7-8**: Eval + Tool-use + Stage 4 hands-on
-5. **Weeks 9+**: Mock interviews + portfolio projects
+5. **Weeks 9+**: Portfolio projects + deep dives

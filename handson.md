@@ -1,6 +1,6 @@
 # Hands-On Labs: Post-Training Practical Roadmap
 
-> Build technical intuition through progressive experiments—from training a tiny model to deploying a specialized agent.
+> Build deep technical intuition through progressive experiments—from training a tiny model to deploying a specialized agent.
 
 ---
 

@@ -1,8 +1,8 @@
 # 🚀 2-3 Week Sprint Guide
 
-> **Priority Levels**: P0 = Must know (interview critical) | P1 = Important (likely to come up) | P2 = Good to know (differentiator)
+> **Priority Levels**: P0 = Essential (core concepts) | P1 = Important (builds depth) | P2 = Good to know (advanced)
 
-For a 2-3 week prep, focus on **P0 items only**. If you have extra time, add P1.
+For a 2-3 week sprint, focus on **P0 items only**. If you have extra time, add P1.
 
 ---
 
@@ -12,7 +12,7 @@ For a 2-3 week prep, focus on **P0 items only**. If you have extra time, add P1.
 
 | Topic | Priority | Why |
 |-------|----------|-----|
-| Self-Attention (QKV, softmax, multi-head) | **P0** | Asked in every coding interview |
+| Self-Attention (QKV, softmax, multi-head) | **P0** | Core building block of transformers |
 | Cross-entropy loss | **P0** | Must understand gradient flow |
 | Temperature vs Top-P tradeoffs | **P0** | Critical for reasoning: high temp aids RL exploration, low temp for verification |
 | PagedAttention (vLLM) | **P0** | Solution for memory fragmentation in agentic workflows |
@@ -28,7 +28,7 @@ For a 2-3 week prep, focus on **P0 items only**. If you have extra time, add P1.
 |-------|----------|-----|
 | **Cold-Start SFT** (reasoning data curation) | **P0** | The quality of reasoning data bootstraps RL success |
 | **DPO loss derivation** (why RM-free) | **P0** | Must explain why it eliminates reward model vs PPO |
-| **GRPO** (DeepSeek-R1 style) | **P0** | 🔥 THE differentiator for 2026 — eliminates Critic, 50% VRAM savings |
+| **GRPO** (DeepSeek-R1 style) | **P0** | 🔥 Key technique for 2026 — eliminates Critic, 50% VRAM savings |
 | **RLHF pipeline** (reward model → PPO) | **P0** | Must understand the classic approach |
 | Chat templates | **P0** | Practical, easy to mess up |
 | PPO advantage estimation | **P1** | Know conceptually, less likely to derive |
@@ -53,8 +53,8 @@ For a 2-3 week prep, focus on **P0 items only**. If you have extra time, add P1.
 
 | Topic | Priority | Why |
 |-------|----------|-----|
-| **LoRA math** (why low-rank works) | **P0** | Frequently asked, derive memory savings |
-| **Flash Attention** (why O(N) memory) | **P0** | Common systems question |
+| **LoRA math** (why low-rank works) | **P0** | Frequently needed, derive memory savings |
+| **Flash Attention** (why O(N) memory) | **P0** | Common systems concept |
 | **PagedAttention** (vLLM) | **P0** | Memory fragmentation solution for agents |
 | **ACE Framework** (Generator/Reflector/Curator) | **P0** | Self-improving context loops for agentic systems |
 | Quantization basics (4-bit, 8-bit) | **P1** | Know tradeoffs |
@@ -72,21 +72,21 @@ For a 2-3 week prep, focus on **P0 items only**. If you have extra time, add P1.
 | **LLM-as-a-Judge** | **P0** | Standard eval method |
 | **Reward hacking** | **P0** | Critical alignment concept |
 | Standard benchmarks (GSM8K, MMLU) | **P1** | Know what they measure |
-| Red-teaming basics | **P1** | Safety interviews |
-| Refusal calibration | **P2** | Anthropic-specific |
+| Red-teaming basics | **P1** | Safety fundamentals |
+| Refusal calibration | **P2** | Advanced safety topic |
 
 ---
 
-### Pillar 5: Interview Skills
+### Pillar 5: Applied Skills
 
 | Topic | Priority | Why |
 |-------|----------|-----|
-| **Implement attention from scratch** | **P0** | Coding round staple |
-| **Top-K / Top-P sampling** | **P0** | Common implementation question |
-| **Explain GRPO vs PPO tradeoffs** | **P0** | The 2026 differentiator question |
-| Custom reward functions | **P1** | For reasoning model interviews |
+| **Implement attention from scratch** | **P0** | Core hands-on skill |
+| **Top-K / Top-P sampling** | **P0** | Common implementation task |
+| **Explain GRPO vs PPO tradeoffs** | **P0** | Key 2026 differentiation |
+| Custom reward functions | **P1** | For reasoning model work |
 | Debugging NaN losses | **P1** | Practical debugging |
-| System design (distributed training) | **P2** | Senior roles only |
+| System design (distributed training) | **P2** | Advanced architecture work |
 
 ---
 
@@ -94,9 +94,9 @@ For a 2-3 week prep, focus on **P0 items only**. If you have extra time, add P1.
 
 | Stage | Priority | Time | Rationale |
 |-------|----------|------|-----------|
-| **Stage 0: nanoGPT** | **P0** | 3-4 days | Builds core intuition, coding interview prep |
+| **Stage 0: nanoGPT** | **P0** | 3-4 days | Builds core intuition, foundational skill |
 | **Stage 1: Cold-Start Data Curation** | **P0** | 4-5 days | Curate CoT reasoning data, not just run LoRA scripts |
-| **Stage 3: Mini-GRPO** | **P0** | 3-4 days | 🔥 THE wow factor — reward `<think>` tags with Unsloth |
+| **Stage 3: Mini-GRPO** | **P0** | 3-4 days | 🔥 Key technique — reward `<think>` tags with Unsloth |
 | Stage 2: DPO | P1 | 2-3 days | Style/safety alignment, less critical than GRPO |
 | Stage 4: Tool Use | P2 | — | Skip for 2-3 week sprint |
 | Stage 5: Eval | P1 | 2 days | At least build simple LLM-as-Judge |
@@ -125,7 +125,7 @@ For a 2-3 week prep, focus on **P0 items only**. If you have extra time, add P1.
 |-----|-------|----------|
 | 1-2 | ACE Framework (Generator/Reflector/Curator) | Design self-improving context loop |
 | 3-4 | PagedAttention, LoRA memory math | Practice system design explanations |
-| 5-7 | Mock interviews, weak areas | — |
+| 5-7 | Project work, weak areas | — |
 
 ---
 
@@ -139,7 +139,7 @@ For a 2-3 week prep, focus on **P0 items only**. If you have extra time, add P1.
 - [ ] Can explain PagedAttention for agentic memory management
 - [ ] Know RLHF pipeline: SFT → Reward Model → PPO
 
-### 🔥 Reasoning Model Concepts (2026 Critical)
+### 🔥 Reasoning Model Concepts (2026 Focus)
 - [ ] Can explain GRPO: eliminates Critic (50% VRAM savings), uses group average for advantage
 - [ ] Understand Cold-Start SFT: curating reasoning data that RL can score
 - [ ] Know Temperature vs Top-P tradeoffs for reasoning (exploration vs verification)
@@ -153,5 +153,5 @@ For a 2-3 week prep, focus on **P0 items only**. If you have extra time, add P1.
 
 ### Paper Deep-Dives
 - [ ] DPO paper (derive the math, understand RM-free insight)
-- [ ] DeepSeek-R1 paper (**deep dive** — GRPO is P0 now)
+- [ ] DeepSeek-R1 paper (**deep dive** — GRPO is key)
 - [ ] LoRA paper (understand rank selection)

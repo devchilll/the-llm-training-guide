@@ -1,6 +1,6 @@
 # Resources: Post-Training & Alignment
 
-> Curated learning materials organized by topic.
+> Curated learning materials organized by topic for building LLM training expertise.
 
 ---
 
