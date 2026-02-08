@@ -31,6 +31,8 @@ labs/
 ├── 04_tool_use/                   # Function calling + S-LoRA
 └── 05_evaluation/                 # LLM-as-Judge + red-teaming
 
+Post-Training Colabs/              # ⚡️ Quick-start notebooks (SFT, DPO, GRPO)
+notes_on_training_infra/           # 🧠 Deep dives on training infrastructure
 infra/                             # vLLM configs, quantization guides
 ```
 
@@ -48,15 +50,20 @@ infra/                             # vLLM configs, quantization guides
 | 4 | **Evaluation** | LLM-as-Judge, reward hacking, red-teaming |
 | 5 | **Interview Prep** | System design, coding, portfolio strategy |
 
+### 🧠 Deep Dives
+| Topic | Document |
+|-------|----------|
+| **Infrastructure** | [**Unsloth Analysis**](./notes_on_training_infra/unsloth_analysis.md) — Understanding VRAM optimization & custom kernels |
+
 ### Hands-On (6 Stages)
 | # | Stage | Timeline | Compute |
 |---|-------|----------|---------|
-| 0 | Pre-training (nanoGPT) | Week 1 | Colab Free |
-| 1 | SFT with LoRA | Weeks 2-3 | Colab Free/Pro |
-| 2 | DPO preference alignment | Weeks 4-5 | Colab Pro |
-| 3 | GRPO reasoning RL | Weeks 6-8 | Colab Pro+ / Local |
-| 4 | Tool use & S-LoRA | Weeks 9-10 | Colab Pro+ / Local |
-| 5 | Evaluation & red-teaming | Weeks 11-12 | Colab Free + API |
+| 0 | [Pre-training (nanoGPT)](./labs/00_pretraining_fundamentals/) | Week 1 | Colab Free |
+| 1 | [SFT with LoRA](./Post-Training%20Colabs/SFT.ipynb) | Weeks 2-3 | Colab Free/Pro |
+| 2 | [DPO preference alignment](./Post-Training%20Colabs/DPO.ipynb) | Weeks 4-5 | Colab Pro |
+| 3 | [GRPO reasoning RL](./Post-Training%20Colabs/GRPO.ipynb) | Weeks 6-8 | Colab Pro+ / Local |
+| 4 | [Tool use & Agents](./Post-Training%20Colabs/multi-turn-agent-tic-tac-toe.ipynb) | Weeks 9-10 | Colab Pro+ / Local |
+| 5 | [Evaluation & red-teaming](./labs/05_evaluation/) | Weeks 11-12 | Colab Free + API |
 
 ---
 
@@ -117,4 +124,5 @@ From [resources.md](./resources.md):
 | **RLHF** | [RLHF Book](https://rlhfbook.com/) by Nathan Lambert |
 | **Code** | [nanoGPT](https://github.com/karpathy/nanoGPT) |
 | **Framework** | [Unsloth](https://github.com/unslothai/unsloth) |
+| **Agent** | [OpenPipe](https://github.com/openpipe/art) |
 | **Papers** | DPO, LoRA, DeepSeek-R1, Flash Attention |
