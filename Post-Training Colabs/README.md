@@ -19,6 +19,17 @@ Hands-on notebooks for fine-tuning small Language Models (SLMs) like **Qwen2.5-0
 - **Goal**: Reinforce reasoning capabilities using group sampling and verification (DeepSeek-R1 style).
 - **Dataset**: `openai/gsm8k` (Questions only).
 - **Technique**: Generates multiple distinct solutions and reinforces the ones that arrive at the correct final answer.
+- **Reference**: Uses `DeepSeek-R1-Distill-Qwen-1.5B` as a teacher/reference.
+
+### 4. [Qwen3_4B_GRPO.ipynb](./Qwen3_4B_GRPO.ipynb) (Advanced GRPO)
+- **Goal**: Scale GRPO to a larger 4B model (Qwen3-4B-Base).
+- **Technique**: Demonstrates **unsloth** memory optimizations to fit larger models on Colab T4.
+- **Dataset**: `open-r1/OpenR1-Math-220k`.
+
+### 5. [multi-turn-agent-tic-tac-toe.ipynb](./multi-turn-agent-tic-tac-toe.ipynb) (Agentic Tool Use)
+- **Goal**: Train an agent to play Tic-Tac-Toe using function calling (tools).
+- **Framework**: **OpenPipe ART** (Agent Reasoning & Training).
+- **Concept**: Multi-turn conversation history + external state tracking.
 
 ## Usage
 1. Open the notebook in Google Colab.
